@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Candyland Final", "Candyland Final\Candyland Final.csproj", "{56F38ECC-2598-48F7-A564-65376AC1D638}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56F38ECC-2598-48F7-A564-65376AC1D638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F38ECC-2598-48F7-A564-65376AC1D638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F38ECC-2598-48F7-A564-65376AC1D638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F38ECC-2598-48F7-A564-65376AC1D638}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {662080DB-799B-46DA-809F-C5F0A86433FA}
+	EndGlobalSection
+EndGlobal
