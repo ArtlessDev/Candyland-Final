@@ -16,5 +16,18 @@ namespace Candyland_Final
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string[] squareTypeSet = { "orange", "blue", "green", "yellow", "red", "purple", 
+                                        "doubleYellow", "doubleOrange", "doubleBlue", 
+                                        "doubleGreen", "doubleRed", "doublePurple", 
+                                        "special"};
+            Random rnd = new Random();
+            int num = rnd.Next(squareTypeSet.Length);
+            string actualSquare = squareTypeSet[num].ToString();
+
+            label1.Text = "The Square to move to is: " + actualSquare;
+        }
     }
 }
