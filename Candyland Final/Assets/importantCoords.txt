@@ -1,0 +1,32 @@
+full map 400x500
+
+important X coordinates:
+45
+75
+105
+135
+165
+195
+225
+255
+285
+315
+345
+375
+405
+435
+
+important Y coordinates:
+100
+160
+220
+250
+280
+310
+340
+
+CANDYCANE: 45,190
+ICE CREAM: 195,160
+GENERIC: 315,220
+LOLLIPOP: 435,130
+DONUT: 225,280
