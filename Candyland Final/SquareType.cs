@@ -8,6 +8,7 @@ namespace Candyland_Final
 {
     class SquareType
     {
+
         private string[] colorTypes = { 
                                    "doubleBlue", 
                                    "doubleGreen", 

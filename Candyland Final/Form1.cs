@@ -19,6 +19,32 @@ namespace Candyland_Final
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Card card = new Card();
+            SquareType square = new SquareType();
+
+            
+
+
+            label1.Text = card.PickCard(square);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*
             string[] squareTypeSet = { "orange", "blue" };
                                         //, "green", "yellow", "red", "purple", 
                                         //"doubleYellow", "doubleOrange", "doubleBlue", 
@@ -45,7 +71,7 @@ namespace Candyland_Final
             if(pictureBox1.Location.X >= 450)
             {
                 MessageBox.Show("x is above 450: " + pictureBox1.Location.X);
-            }
+            }*/
 
         }
 

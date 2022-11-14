@@ -8,5 +8,24 @@ namespace Candyland_Final
 {
     class Space
     {
+        public Space()
+        {
+
+        }
+
+        public SquareType Square
+        {
+            get; set;
+        }
+
+        public int XValue
+        {
+            get; set;
+        }
+
+        public int YValue
+        {
+            get; set;
+        }
     }
 }
