@@ -8,8 +8,7 @@ namespace Candyland_Final
 {
     class SquareType
     {
-
-        private string[] colorTypes = { 
+        private static string[] colorTypes = { 
                                    "doubleBlue", 
                                    "doubleGreen", 
                                    "doubleOrange",
@@ -24,7 +23,7 @@ namespace Candyland_Final
                                    "singleYellow",
                                    "special"
                                   };
-        private string[] specialTypes = {
+        private static string[] specialTypes = {
                                     "specialCandycane",
                                     "specialDonut",
                                     "specialGeneric",
@@ -32,13 +31,13 @@ namespace Candyland_Final
                                     "specialLollipop"
                                     };
 
-        public string[] ColorTypes
+        public static string[] ColorTypes
         {
-            get { return this.colorTypes; }
+            get { return colorTypes; }
         }
-        public string[] SpecialTypes
+        public static string[] SpecialTypes
         {
-            get { return this.specialTypes; }
+            get { return specialTypes; }
         }
     }
 }
