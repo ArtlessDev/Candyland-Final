@@ -8,24 +8,50 @@ namespace Candyland_Final
 {
     class Space
     {
-        public Space()
-        {
+        private string square;
+        private int x, y;
 
+        public Space(string name, int x, int y)
+        {
+            square = name;
+            this.x = x;
+            this.y = y;
         }
 
-        public SquareType Square
+        public string Square
         {
-            get; set;
+            get 
+            {
+                return square;
+            } 
+            set
+            {
+                this.square = value;
+            }
         }
 
         public int XValue
         {
-            get; set;
+            get
+            {
+                return x;
+            }
+            set
+            {
+                this.x = value;
+            }
         }
 
         public int YValue
         {
-            get; set;
+            get
+            {
+                return y;
+            }
+            set
+            {
+                this.y = value;
+            }
         }
     }
 }

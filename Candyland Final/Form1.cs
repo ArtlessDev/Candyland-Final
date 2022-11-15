@@ -12,6 +12,7 @@ namespace Candyland_Final
 {
     public partial class Form1 : Form
     {
+        Player p1 = new Player(1, "jair", 0);
         public Form1()
         {
             InitializeComponent();
@@ -19,15 +20,20 @@ namespace Candyland_Final
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             Card card = new Card();
+            card.CardType = card.PickCard();
 
+            label1.Text = card.CardType;
             
 
+            Board board = new Board();
 
-            label1.Text = card.PickCard();
+            p1.Position = board.GetNextSpace(ref p1, card);
+            Console.WriteLine(p1.Position + " is the player position");
 
-
-
+            //pictureBox1.Top = Board.GetNextSpaceTop(ref p1, card);
+            //pictureBox1.Left = Board.GetNextSpaceLeft(ref p1, card);
 
 
 

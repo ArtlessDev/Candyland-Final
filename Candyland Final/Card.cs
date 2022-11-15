@@ -8,7 +8,12 @@ namespace Candyland_Final
 {
     class Card
     {
+        private string cardType;
         public string CardImg
+        {
+            get; set;
+        }
+        public string CardType
         {
             get; set;
         }
@@ -18,11 +23,13 @@ namespace Candyland_Final
             Random rnd = new Random();
             int num = rnd.Next(SquareType.ColorTypes.Length);
             string actualSquare = SquareType.ColorTypes[num].ToString();
+            
 
-            if(actualSquare == "special")
+            if (actualSquare == "special")
             {
                 int newNum = rnd.Next(SquareType.SpecialTypes.Length);
                 actualSquare = SquareType.SpecialTypes[newNum].ToString();
+                
             }
 
             return actualSquare;

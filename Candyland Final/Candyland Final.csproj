@@ -88,6 +88,24 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Assets\candylandBoard.png" />
+    <Content Include="Assets\doubleBlue.png" />
+    <Content Include="Assets\doubleGreen.png" />
+    <Content Include="Assets\doubleOrange.png" />
+    <Content Include="Assets\doublePurple.png" />
+    <Content Include="Assets\doubleRed.png" />
+    <Content Include="Assets\doubleYellow.png" />
+    <Content Include="Assets\importantCoords.txt" />
+    <Content Include="Assets\singleBlue.png" />
+    <Content Include="Assets\singleGreen.png" />
+    <Content Include="Assets\singleOrange.png" />
+    <Content Include="Assets\singlePurple.png" />
+    <Content Include="Assets\singleRed.png" />
+    <Content Include="Assets\singleYellow.png" />
+    <Content Include="Assets\specialCandycane.png" />
+    <Content Include="Assets\specialDonut.png" />
+    <Content Include="Assets\specialGeneric.png" />
+    <Content Include="Assets\specialIcecream.png" />
+    <Content Include="Assets\specialLollipop.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
