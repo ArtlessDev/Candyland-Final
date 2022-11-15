@@ -8,5 +8,30 @@ namespace Candyland_Final
 {
     class GameState
     {
+        private Player[] players;
+        private int currentTurn = 1;
+
+        public Player[] Players
+        {
+            get { return this.players; }
+            set { this.players = value; }
+        }
+        public int CurrentTurn
+        {
+            get { return this.currentTurn; }
+            set { this.currentTurn = value; }
+        }
+        public Player GetFarthestPlayer()
+        {
+            Player farthestPlayer = this.players[0];
+            for (int i = 0; i < this.players.Length; i++)
+            {
+                if (this.players[i].Position > farthestPlayer.Position)
+                {
+                    farthestPlayer = this.players[i];
+                }
+            }
+            return farthestPlayer;
+        }
     }
 }
