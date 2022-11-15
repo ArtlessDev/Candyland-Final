@@ -20,12 +20,11 @@ namespace Candyland_Final
         private void button1_Click(object sender, EventArgs e)
         {
             Card card = new Card();
-            SquareType square = new SquareType();
 
             
 
 
-            label1.Text = card.PickCard(square);
+            label1.Text = card.PickCard();
 
 
 

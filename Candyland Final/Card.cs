@@ -13,11 +13,17 @@ namespace Candyland_Final
             get; set;
         }
 
-        public string PickCard(SquareType square)
+        public string PickCard()
         {
             Random rnd = new Random();
-            int num = rnd.Next(square.ColorTypes.Length);
-            string actualSquare = square.ColorTypes[num].ToString();
+            int num = rnd.Next(SquareType.ColorTypes.Length);
+            string actualSquare = SquareType.ColorTypes[num].ToString();
+
+            if(actualSquare == "special")
+            {
+                int newNum = rnd.Next(SquareType.SpecialTypes.Length);
+                actualSquare = SquareType.SpecialTypes[newNum].ToString();
+            }
 
             return actualSquare;
         }
