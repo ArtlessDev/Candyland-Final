@@ -47,13 +47,6 @@ namespace Candyland_Final
                 Console.WriteLine(p2.Position + " is the player position");
 
             }
-
-
-            
-
-
-
-
         }
 
         private void Form1_Load(object sender, EventArgs e)

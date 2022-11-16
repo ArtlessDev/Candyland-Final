@@ -89,20 +89,18 @@ namespace Candyland_Final
             spaces[64] = new Space("blue", 285, 340);
             spaces[65] = new Space("purple", 315, 340);
 
-            spaces[66] = new Space("final", 375, 340);
+            spaces[66] = new Space("finish", 375, 340);
         }
 
         public int GetLeft(Player player)
         {
             Console.WriteLine("x: " + spaces[player.Position].XValue);
-            Console.WriteLine("y: " + spaces[player.Position].YValue);
             int x = spaces[player.Position].XValue;
 
             return x;
         }
         public int GetTop(Player player)
         {
-            Console.WriteLine("x: " + spaces[player.Position].XValue);
             Console.WriteLine("y: " + spaces[player.Position].YValue);
             int y = spaces[player.Position].YValue;
 
@@ -112,21 +110,24 @@ namespace Candyland_Final
 
         public int GetNextSpace(ref Player player, Card card)
         {
-
-
+            int n = player.Position;
             string actualSquare = card.CardType;
 
             if (actualSquare.Contains("double"))
             {
                 actualSquare = actualSquare.Replace("double", "").ToLower();
-                for (int i = player.Position; i < spaces.Length; i++)
+                for (int i = player.Position+1; i < spaces.Length; i++)
                 {
                     if (actualSquare.Equals(spaces[i].Square))
                     {
                         Console.WriteLine("in da double statement " + i);
                         player.Position = i;
+                        n = player.Position;
                         break;
                     }
+
+                    
+                    
                 }
                 for (int i = player.Position +1; i < spaces.Length; i++)
                 {
@@ -141,7 +142,7 @@ namespace Candyland_Final
             if (actualSquare.Contains("single"))
             {
                 actualSquare = actualSquare.Replace("single", "").ToLower();
-                for (int i = player.Position; i < spaces.Length; i++)
+                for (int i = player.Position+1; i < spaces.Length; i++)
                 {
                     if (actualSquare.Equals(spaces[i].Square))
                     {
@@ -149,11 +150,11 @@ namespace Candyland_Final
                         player.Position = i;
                         break;
                     }
+                    
                 }
             }
             if (actualSquare.Contains("special"))
             {
-                //actualSquare = actualSquare.Replace("", "").ToLower();
                 for (int i = 0; i < spaces.Length; i++)
                 {
                     if (actualSquare.Equals(spaces[i].Square))
@@ -163,6 +164,11 @@ namespace Candyland_Final
                         break;
                     }
                 }
+            }
+
+            if (player.Position == n)
+            {
+                player.Position = 66;
             }
 
             return player.Position;
