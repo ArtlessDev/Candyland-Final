@@ -32,6 +32,11 @@ namespace Candyland_Final
             Board board = new Board();
 
             p1.Position = board.GetNextSpace(ref p1, card);
+
+            pictureBox1.Left =  board.GetLeft(p1);
+            pictureBox1.Top = board.GetTop(p1);
+
+
             Console.WriteLine(p1.Position + " is the player position");
 
             //pictureBox1.Top = Board.GetNextSpaceTop(ref p1, card);

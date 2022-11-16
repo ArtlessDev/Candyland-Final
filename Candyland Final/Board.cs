@@ -92,6 +92,24 @@ namespace Candyland_Final
             spaces[66] = new Space("final", 375, 340);
         }
 
+        public int GetLeft(Player player)
+        {
+            Console.WriteLine("x: " + spaces[player.Position].XValue);
+            Console.WriteLine("y: " + spaces[player.Position].YValue);
+            int x = spaces[player.Position].XValue;
+
+            return x;
+        }
+        public int GetTop(Player player)
+        {
+            Console.WriteLine("x: " + spaces[player.Position].XValue);
+            Console.WriteLine("y: " + spaces[player.Position].YValue);
+            int y = spaces[player.Position].YValue;
+
+            return y;
+        }
+
+
         public int GetNextSpace(ref Player player, Card card)
         {
 
