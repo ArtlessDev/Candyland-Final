@@ -35,7 +35,7 @@ namespace Candyland_Final
             spaces[16] = new Space("blue", 285, 160);
             spaces[17] = new Space("purple", 255, 160);
             spaces[18] = new Space("red", 225, 160);
-            spaces[19] = new Space("specialIceCream", 195, 160);
+            spaces[19] = new Space("specialIcecream", 195, 160);
             spaces[20] = new Space("yellow", 165, 160);
             spaces[21] = new Space("green", 135, 160);
             spaces[22] = new Space("blue", 105, 160);
@@ -146,6 +146,19 @@ namespace Candyland_Final
                     if (actualSquare.Equals(spaces[i].Square))
                     {
                         Console.WriteLine("in da single statement " + i);
+                        player.Position = i;
+                        break;
+                    }
+                }
+            }
+            if (actualSquare.Contains("special"))
+            {
+                //actualSquare = actualSquare.Replace("", "").ToLower();
+                for (int i = 0; i < spaces.Length; i++)
+                {
+                    if (actualSquare.Equals(spaces[i].Square))
+                    {
+                        Console.WriteLine("in da special statement " + i);
                         player.Position = i;
                         break;
                     }

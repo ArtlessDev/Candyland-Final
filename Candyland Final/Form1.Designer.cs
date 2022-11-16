@@ -64,10 +64,10 @@ namespace Candyland_Final
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(57, 113);
+            this.pictureBox1.Location = new System.Drawing.Point(75, 150);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -84,10 +84,10 @@ namespace Candyland_Final
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(81, 113);
+            this.pictureBox2.Location = new System.Drawing.Point(99, 150);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
