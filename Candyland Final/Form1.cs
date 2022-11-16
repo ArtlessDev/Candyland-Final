@@ -67,7 +67,7 @@ namespace Candyland_Final
 
         private void btnEndTurn_Click(object sender, EventArgs e)
         {
-            this.gameState.RotateTurns();
+            this.gameState.RotateTurns(2);
             lblCurrentTurn.Text = "Current turn: Player " + this.gameState.CurrentTurn.ToString();
 
             //if player position is 3 and player name is cpu, then auto move the turn
