@@ -13,6 +13,7 @@ namespace Candyland_Final
     public partial class Form1 : Form
     {
         Player p1 = new Player(1, "jair", 0);
+        Player p2 = new Player(1, "jason", 0);
         GameState gameState = new GameState();
         public Form1()
         {
@@ -31,59 +32,27 @@ namespace Candyland_Final
 
             Board board = new Board();
 
-            p1.Position = board.GetNextSpace(ref p1, card);
-
-            pictureBox1.Left =  board.GetLeft(p1);
-            pictureBox1.Top = board.GetTop(p1);
-
-
-            Console.WriteLine(p1.Position + " is the player position");
-
-            //pictureBox1.Top = Board.GetNextSpaceTop(ref p1, card);
-            //pictureBox1.Left = Board.GetNextSpaceLeft(ref p1, card);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            /*
-            string[] squareTypeSet = { "orange", "blue" };
-                                        //, "green", "yellow", "red", "purple", 
-                                        //"doubleYellow", "doubleOrange", "doubleBlue", 
-                                        //"doubleGreen", "doubleRed", "doublePurple", 
-                                        //"special"};
-            Random rnd = new Random();
-            int num = rnd.Next(squareTypeSet.Length);
-            string actualSquare = squareTypeSet[num].ToString();
-
-            switch (actualSquare)
+            if(this.gameState.CurrentTurn == 1)
             {
-                case "orange":
-                    pictureBox1.Left = 195;
-                    pictureBox1.Top = 45;
-                    break;
+                p1.Position = board.GetNextSpace(ref p1, card);
+                pictureBox1.Left = board.GetLeft(p1);
+                pictureBox1.Top = board.GetTop(p1);
+                Console.WriteLine(p1.Position + " is the player position");
+            }
+            else if(this.gameState.CurrentTurn == 2)
+            {
+                p2.Position = board.GetNextSpace(ref p2, card);
+                pictureBox2.Left = board.GetLeft(p2);
+                pictureBox2.Top = board.GetTop(p2);
+                Console.WriteLine(p2.Position + " is the player position");
+
             }
 
-            label1.Text = "The Square to move to is: " + actualSquare;
 
-            if(pictureBox1.Location.X < 450)
-            {
-                //pictureBox1.Left += 20;
-            }
-            if(pictureBox1.Location.X >= 450)
-            {
-                MessageBox.Show("x is above 450: " + pictureBox1.Location.X);
-            }*/
+            
+
+
+
 
         }
 
@@ -107,6 +76,8 @@ namespace Candyland_Final
         {
             this.gameState.RotateTurns();
             lblCurrentTurn.Text = "Current turn: Player " + this.gameState.CurrentTurn.ToString();
+
+            //if player position is 3 and player name is cpu, then auto move the turn
         }
     }
 }
