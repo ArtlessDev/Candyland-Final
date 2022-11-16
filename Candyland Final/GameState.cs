@@ -33,5 +33,14 @@ namespace Candyland_Final
             }
             return farthestPlayer;
         }
+
+        public void RotateTurns()
+        {
+            this.currentTurn++;
+            if (this.currentTurn > 4)
+            {
+                this.currentTurn = 1;
+            }
+        }
     }
 }

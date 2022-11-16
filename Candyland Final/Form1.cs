@@ -13,9 +13,11 @@ namespace Candyland_Final
     public partial class Form1 : Form
     {
         Player p1 = new Player(1, "jair", 0);
+        GameState gameState = new GameState();
         public Form1()
         {
             InitializeComponent();
+            lblCurrentTurn.Text = "Current turn: Player " + this.gameState.CurrentTurn.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -98,7 +100,8 @@ namespace Candyland_Final
 
         private void btnEndTurn_Click(object sender, EventArgs e)
         {
-
+            this.gameState.RotateTurns();
+            lblCurrentTurn.Text = "Current turn: Player " + this.gameState.CurrentTurn.ToString();
         }
     }
 }
