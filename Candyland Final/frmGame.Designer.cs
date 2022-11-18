@@ -1,7 +1,7 @@
 ﻿
 namespace Candyland_Final
 {
-    partial class Form1
+    partial class frmGame
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Candyland_Final
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGame));
             this.label1 = new System.Windows.Forms.Label();
             this.btnDraw = new System.Windows.Forms.Button();
             this.pbPlayer1 = new System.Windows.Forms.PictureBox();
@@ -137,7 +137,7 @@ namespace Candyland_Final
             this.pbPlayer4.TabStop = false;
             this.pbPlayer4.Visible = false;
             // 
-            // Form1
+            // frmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -152,8 +152,8 @@ namespace Candyland_Final
             this.Controls.Add(this.label1);
             this.Controls.Add(this.boardImage);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frmGame";
+            this.Text = "Candyland";
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.boardImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer2)).EndInit();

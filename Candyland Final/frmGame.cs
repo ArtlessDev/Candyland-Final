@@ -10,20 +10,23 @@ using System.Windows.Forms;
 
 namespace Candyland_Final
 {
-    public partial class Form1 : Form
+    public partial class frmGame : Form
     {
         GameState gameState;
-        public Form1(GameState gs)
+        Board board = new Board();
+        public frmGame(GameState gs)
         {
             InitializeComponent();
             this.gameState = gs;
 
             addPlayersToUI();
-            lblCurrentTurn.Text = "Current turn: " + this.gameState.Players[this.gameState.CurrentTurn - 1].Name;
+            string playerName = this.gameState.Players[this.gameState.CurrentTurn - 1].Name;
+            lblCurrentTurn.Text = "Current turn: " + playerName;
         }
 
         private void btnDraw_Click(object sender, EventArgs e)
         {
+            // toggle buttons so nobody can spam click and win
             this.btnDraw.Visible = false;
             this.btnEndTurn.Visible = true;
 
@@ -31,9 +34,8 @@ namespace Candyland_Final
             card.CardType = card.PickCard();
 
             label1.Text = card.CardType;
-            
-            Board board = new Board();
 
+            // account for each turn
             if(this.gameState.CurrentTurn == 1)
             {
                 Player p1 = this.gameState.Players[0];
@@ -71,11 +73,14 @@ namespace Candyland_Final
 
         private void btnEndTurn_Click(object sender, EventArgs e)
         {
+            // toggle buttons so nobody can spam click and win
             this.btnEndTurn.Visible = false;
             this.btnDraw.Visible = true;
+
             int playerCount = this.gameState.Players.Length;
             this.gameState.RotateTurns(playerCount);
-            lblCurrentTurn.Text = "Current turn: " + this.gameState.Players[this.gameState.CurrentTurn - 1].Name;
+            string playerName = this.gameState.Players[this.gameState.CurrentTurn - 1].Name;
+            lblCurrentTurn.Text = "Current turn: " + playerName;
         }
 
         private void addPlayersToUI()
@@ -127,6 +132,8 @@ namespace Candyland_Final
             if (this.gameState.GetFarthestPlayer().Position >= 66)
             {
                 MessageBox.Show(this.gameState.GetFarthestPlayer().Name + " wins!\nHit 'OK' to play again");
+
+                // close current form and open menu form: https://stackoverflow.com/questions/5548746/c-sharp-open-a-new-form-then-close-the-current-form
                 this.Hide();
                 frmMenu menu = new frmMenu();
                 menu.Closed += (s, args) => this.Close();

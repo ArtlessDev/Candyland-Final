@@ -25,7 +25,7 @@ namespace Candyland_Final
 
             // close current form and open main form: https://stackoverflow.com/questions/5548746/c-sharp-open-a-new-form-then-close-the-current-form
             this.Hide();
-            Form1 main = new Form1(this.gameState);
+            frmGame main = new frmGame(this.gameState); // sends this gameState to main game form
             main.Closed += (s, args) => this.Close();
             main.Show();
         }
