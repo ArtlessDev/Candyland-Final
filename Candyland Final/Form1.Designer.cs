@@ -31,7 +31,7 @@ namespace Candyland_Final
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDraw = new System.Windows.Forms.Button();
             this.pbPlayer1 = new System.Windows.Forms.PictureBox();
             this.boardImage = new System.Windows.Forms.PictureBox();
             this.pbPlayer2 = new System.Windows.Forms.PictureBox();
@@ -56,21 +56,21 @@ namespace Candyland_Final
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // button1
+            // btnDraw
             // 
-            this.button1.Location = new System.Drawing.Point(328, 561);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 19);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Draw a card";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnDraw.Location = new System.Drawing.Point(328, 561);
+            this.btnDraw.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDraw.Name = "btnDraw";
+            this.btnDraw.Size = new System.Drawing.Size(74, 19);
+            this.btnDraw.TabIndex = 1;
+            this.btnDraw.Text = "Draw a card";
+            this.btnDraw.UseVisualStyleBackColor = true;
+            this.btnDraw.Click += new System.EventHandler(this.btnDraw_Click);
             // 
             // pbPlayer1
             // 
             this.pbPlayer1.Location = new System.Drawing.Point(56, 122);
-            this.pbPlayer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbPlayer1.Margin = new System.Windows.Forms.Padding(2);
             this.pbPlayer1.Name = "pbPlayer1";
             this.pbPlayer1.Size = new System.Drawing.Size(15, 16);
             this.pbPlayer1.TabIndex = 2;
@@ -81,7 +81,7 @@ namespace Candyland_Final
             this.boardImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.boardImage.Image = ((System.Drawing.Image)(resources.GetObject("boardImage.Image")));
             this.boardImage.Location = new System.Drawing.Point(0, 0);
-            this.boardImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.boardImage.Margin = new System.Windows.Forms.Padding(2);
             this.boardImage.Name = "boardImage";
             this.boardImage.Size = new System.Drawing.Size(504, 488);
             this.boardImage.TabIndex = 3;
@@ -90,7 +90,7 @@ namespace Candyland_Final
             // pbPlayer2
             // 
             this.pbPlayer2.Location = new System.Drawing.Point(74, 122);
-            this.pbPlayer2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbPlayer2.Margin = new System.Windows.Forms.Padding(2);
             this.pbPlayer2.Name = "pbPlayer2";
             this.pbPlayer2.Size = new System.Drawing.Size(15, 16);
             this.pbPlayer2.TabIndex = 4;
@@ -99,12 +99,13 @@ namespace Candyland_Final
             // btnEndTurn
             // 
             this.btnEndTurn.Location = new System.Drawing.Point(410, 561);
-            this.btnEndTurn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEndTurn.Margin = new System.Windows.Forms.Padding(2);
             this.btnEndTurn.Name = "btnEndTurn";
             this.btnEndTurn.Size = new System.Drawing.Size(74, 19);
             this.btnEndTurn.TabIndex = 5;
             this.btnEndTurn.Text = "End Turn";
             this.btnEndTurn.UseVisualStyleBackColor = true;
+            this.btnEndTurn.Visible = false;
             this.btnEndTurn.Click += new System.EventHandler(this.btnEndTurn_Click);
             // 
             // lblCurrentTurn
@@ -147,10 +148,10 @@ namespace Candyland_Final
             this.Controls.Add(this.btnEndTurn);
             this.Controls.Add(this.pbPlayer2);
             this.Controls.Add(this.pbPlayer1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDraw);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.boardImage);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer1)).EndInit();
@@ -166,7 +167,7 @@ namespace Candyland_Final
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDraw;
         private System.Windows.Forms.PictureBox pbPlayer1;
         private System.Windows.Forms.PictureBox boardImage;
         private System.Windows.Forms.PictureBox pbPlayer2;

@@ -22,15 +22,16 @@ namespace Candyland_Final
             lblCurrentTurn.Text = "Current turn: " + this.gameState.Players[this.gameState.CurrentTurn - 1].Name;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnDraw_Click(object sender, EventArgs e)
         {
-            
+            this.btnDraw.Visible = false;
+            this.btnEndTurn.Visible = true;
+
             Card card = new Card();
             card.CardType = card.PickCard();
 
             label1.Text = card.CardType;
             
-
             Board board = new Board();
 
             if(this.gameState.CurrentTurn == 1)
@@ -70,6 +71,8 @@ namespace Candyland_Final
 
         private void btnEndTurn_Click(object sender, EventArgs e)
         {
+            this.btnEndTurn.Visible = false;
+            this.btnDraw.Visible = true;
             int playerCount = this.gameState.Players.Length;
             this.gameState.RotateTurns(playerCount);
             lblCurrentTurn.Text = "Current turn: " + this.gameState.Players[this.gameState.CurrentTurn - 1].Name;
