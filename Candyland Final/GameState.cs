@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Candyland_Final
 {
-    class GameState
+    public class GameState
     {
         private Player[] players;
         private int currentTurn = 1;

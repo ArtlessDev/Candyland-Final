@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Candyland_Final
 {
-    class Player
+    public class Player
     {
         private int id;
         private string name;
-        private int position;
+        private int position = 0;
 
         public Player()
         {

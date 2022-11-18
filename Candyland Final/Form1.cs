@@ -12,13 +12,14 @@ namespace Candyland_Final
 {
     public partial class Form1 : Form
     {
-        Player p1 = new Player(1, "jair", 0);
-        Player p2 = new Player(1, "jason", 0);
-        GameState gameState = new GameState();
-        public Form1()
+        GameState gameState;
+        public Form1(GameState gs)
         {
             InitializeComponent();
-            lblCurrentTurn.Text = "Current turn: Player " + this.gameState.CurrentTurn.ToString();
+            this.gameState = gs;
+
+            addPlayersToUI();
+            lblCurrentTurn.Text = "Current turn: " + this.gameState.Players[this.gameState.CurrentTurn - 1].Name;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,43 +35,100 @@ namespace Candyland_Final
 
             if(this.gameState.CurrentTurn == 1)
             {
+                Player p1 = this.gameState.Players[0];
                 p1.Position = board.GetNextSpace(ref p1, card);
-                pictureBox1.Left = board.GetLeft(p1);
-                pictureBox1.Top = board.GetTop(p1);
+                pbPlayer1.Left = board.GetLeft(p1);
+                pbPlayer1.Top = board.GetTop(p1);
                 Console.WriteLine(p1.Position + " is the player position");
             }
             else if(this.gameState.CurrentTurn == 2)
             {
+                Player p2 = this.gameState.Players[1];
                 p2.Position = board.GetNextSpace(ref p2, card);
-                pictureBox2.Left = board.GetLeft(p2);
-                pictureBox2.Top = board.GetTop(p2);
+                pbPlayer2.Left = board.GetLeft(p2);
+                pbPlayer2.Top = board.GetTop(p2);
                 Console.WriteLine(p2.Position + " is the player position");
 
-            }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            //boardImage.SizeMode = PictureBoxSizeMode.StretchImage;
-
-            pictureBox2.Load("https://img.pokemondb.net/artwork/squirtle.jpg");
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-
-            pictureBox1.Load("https://img.pokemondb.net/artwork/bulbasaur.jpg");
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-
-            PictureBox[] players =
+            } else if (this.gameState.CurrentTurn == 3)
             {
-                pictureBox1, pictureBox2
-            };
+                Player p3 = this.gameState.Players[2];
+                p3.Position = board.GetNextSpace(ref p3, card);
+                pbPlayer3.Left = board.GetLeft(p3);
+                pbPlayer3.Top = board.GetTop(p3);
+                Console.WriteLine(p3.Position + " is the player position");
+            } else
+            {
+                Player p4 = this.gameState.Players[3];
+                p4.Position = board.GetNextSpace(ref p4, card);
+                pbPlayer4.Left = board.GetLeft(p4);
+                pbPlayer4.Top = board.GetTop(p4);
+                Console.WriteLine(p4.Position + " is the player position");
+            }
+
+            handleWin();
         }
 
         private void btnEndTurn_Click(object sender, EventArgs e)
         {
-            this.gameState.RotateTurns(2);
-            lblCurrentTurn.Text = "Current turn: Player " + this.gameState.CurrentTurn.ToString();
+            int playerCount = this.gameState.Players.Length;
+            this.gameState.RotateTurns(playerCount);
+            lblCurrentTurn.Text = "Current turn: " + this.gameState.Players[this.gameState.CurrentTurn - 1].Name;
+        }
 
-            //if player position is 3 and player name is cpu, then auto move the turn
+        private void addPlayersToUI()
+        {
+            int playerCount = this.gameState.Players.Length;
+
+            if (playerCount == 2)
+            {
+                pbPlayer1.Load("https://img.pokemondb.net/artwork/bulbasaur.jpg");
+                pbPlayer1.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                pbPlayer2.Load("https://img.pokemondb.net/artwork/squirtle.jpg");
+                pbPlayer2.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            else if (playerCount == 3)
+            {
+                pbPlayer1.Load("https://img.pokemondb.net/artwork/bulbasaur.jpg");
+                pbPlayer1.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                pbPlayer2.Load("https://img.pokemondb.net/artwork/squirtle.jpg");
+                pbPlayer2.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                pbPlayer3.Load("https://img.pokemondb.net/artwork/charmander.jpg");
+                pbPlayer3.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                pbPlayer3.Visible = true;
+            }
+            else
+            {
+                pbPlayer1.Load("https://img.pokemondb.net/artwork/bulbasaur.jpg");
+                pbPlayer1.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                pbPlayer2.Load("https://img.pokemondb.net/artwork/squirtle.jpg");
+                pbPlayer2.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                pbPlayer3.Load("https://img.pokemondb.net/artwork/charmander.jpg");
+                pbPlayer3.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                pbPlayer4.Load("https://img.pokemondb.net/artwork/muk.jpg");
+                pbPlayer4.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                pbPlayer3.Visible = true;
+                pbPlayer4.Visible = true;
+            }
+        }
+
+        private void handleWin()
+        {
+            if (this.gameState.GetFarthestPlayer().Position >= 66)
+            {
+                MessageBox.Show(this.gameState.GetFarthestPlayer().Name + " wins!\nHit 'OK' to play again");
+                this.Hide();
+                frmMenu menu = new frmMenu();
+                menu.Closed += (s, args) => this.Close();
+                menu.Show();
+            }
         }
     }
 }
