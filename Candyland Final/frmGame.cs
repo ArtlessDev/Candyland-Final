@@ -33,8 +33,7 @@ namespace Candyland_Final
             Card card = new Card();
             card.CardType = card.PickCard();
 
-            // Assets folder inside bin/Debug, throws exception otherwise
-            string cardFilePath = $@"Assets\{card.CardType}.png";
+            string cardFilePath = $@"..\..\Assets\{card.CardType}.png";
             pbCurrentCard.Load(cardFilePath);
             pbCurrentCard.SizeMode = PictureBoxSizeMode.StretchImage;
 
