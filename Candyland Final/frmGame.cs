@@ -131,7 +131,22 @@ namespace Candyland_Final
         {
             if (this.gameState.GetFarthestPlayer().Position >= 66)
             {
-                MessageBox.Show(this.gameState.GetFarthestPlayer().Name + " wins!\nHit 'OK' to play again");
+                Player winner = this.gameState.GetFarthestPlayer();
+                winner.Score++;
+
+                foreach (Player p in ScoreboardDB.GetAllScores())
+                {
+                    if (p.Name.CompareTo(winner.Name) == 0)
+                    {
+                        ScoreboardDB.UpdateScore(p);
+                    } else
+                    {
+                        ScoreboardDB.AddNewScore(winner);
+                    }
+                }
+
+                frmStats statsForm = new frmStats(winner.Name);
+                statsForm.ShowDialog();
 
                 // close current form and open menu form: https://stackoverflow.com/questions/5548746/c-sharp-open-a-new-form-then-close-the-current-form
                 this.Hide();

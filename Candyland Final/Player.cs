@@ -11,6 +11,7 @@ namespace Candyland_Final
         private int id;
         private string name;
         private int position = 0;
+        private int score = 0;
 
         public Player()
         {
@@ -37,6 +38,11 @@ namespace Candyland_Final
         {
             get { return this.position; }
             set { this.position = value; }
+        }
+        public int Score
+        {
+            get { return this.score; }
+            set { this.score = value; }
         }
     }
 }
