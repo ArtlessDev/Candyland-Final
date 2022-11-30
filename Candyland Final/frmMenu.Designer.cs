@@ -29,6 +29,7 @@ namespace Candyland_Final
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.label1 = new System.Windows.Forms.Label();
             this.ddlPlayerCount = new System.Windows.Forms.ComboBox();
             this.lblPlayerCount = new System.Windows.Forms.Label();
@@ -41,13 +42,15 @@ namespace Candyland_Final
             this.txtName3 = new System.Windows.Forms.TextBox();
             this.lblName4 = new System.Windows.Forms.Label();
             this.txtName4 = new System.Windows.Forms.TextBox();
+            this.pbMM = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMM)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(101, 48);
+            this.label1.Location = new System.Drawing.Point(40, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(298, 32);
             this.label1.TabIndex = 0;
@@ -60,7 +63,7 @@ namespace Candyland_Final
             "2",
             "3",
             "4"});
-            this.ddlPlayerCount.Location = new System.Drawing.Point(120, 125);
+            this.ddlPlayerCount.Location = new System.Drawing.Point(59, 111);
             this.ddlPlayerCount.Name = "ddlPlayerCount";
             this.ddlPlayerCount.Size = new System.Drawing.Size(121, 21);
             this.ddlPlayerCount.TabIndex = 1;
@@ -70,7 +73,7 @@ namespace Candyland_Final
             // lblPlayerCount
             // 
             this.lblPlayerCount.AutoSize = true;
-            this.lblPlayerCount.Location = new System.Drawing.Point(120, 106);
+            this.lblPlayerCount.Location = new System.Drawing.Point(59, 92);
             this.lblPlayerCount.Name = "lblPlayerCount";
             this.lblPlayerCount.Size = new System.Drawing.Size(99, 13);
             this.lblPlayerCount.TabIndex = 2;
@@ -78,7 +81,7 @@ namespace Candyland_Final
             // 
             // btnPlay
             // 
-            this.btnPlay.Location = new System.Drawing.Point(323, 371);
+            this.btnPlay.Location = new System.Drawing.Point(372, 362);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(75, 23);
             this.btnPlay.TabIndex = 3;
@@ -88,14 +91,14 @@ namespace Candyland_Final
             // 
             // txtName1
             // 
-            this.txtName1.Location = new System.Drawing.Point(120, 184);
+            this.txtName1.Location = new System.Drawing.Point(59, 170);
             this.txtName1.Name = "txtName1";
             this.txtName1.Size = new System.Drawing.Size(100, 20);
             this.txtName1.TabIndex = 4;
             // 
             // txtName2
             // 
-            this.txtName2.Location = new System.Drawing.Point(120, 231);
+            this.txtName2.Location = new System.Drawing.Point(59, 217);
             this.txtName2.Name = "txtName2";
             this.txtName2.Size = new System.Drawing.Size(100, 20);
             this.txtName2.TabIndex = 5;
@@ -103,7 +106,7 @@ namespace Candyland_Final
             // lblName1
             // 
             this.lblName1.AutoSize = true;
-            this.lblName1.Location = new System.Drawing.Point(120, 168);
+            this.lblName1.Location = new System.Drawing.Point(59, 154);
             this.lblName1.Name = "lblName1";
             this.lblName1.Size = new System.Drawing.Size(72, 13);
             this.lblName1.TabIndex = 8;
@@ -112,7 +115,7 @@ namespace Candyland_Final
             // lblName2
             // 
             this.lblName2.AutoSize = true;
-            this.lblName2.Location = new System.Drawing.Point(117, 215);
+            this.lblName2.Location = new System.Drawing.Point(56, 201);
             this.lblName2.Name = "lblName2";
             this.lblName2.Size = new System.Drawing.Size(72, 13);
             this.lblName2.TabIndex = 9;
@@ -121,7 +124,7 @@ namespace Candyland_Final
             // lblName3
             // 
             this.lblName3.AutoSize = true;
-            this.lblName3.Location = new System.Drawing.Point(117, 262);
+            this.lblName3.Location = new System.Drawing.Point(56, 248);
             this.lblName3.Name = "lblName3";
             this.lblName3.Size = new System.Drawing.Size(72, 13);
             this.lblName3.TabIndex = 11;
@@ -130,7 +133,7 @@ namespace Candyland_Final
             // 
             // txtName3
             // 
-            this.txtName3.Location = new System.Drawing.Point(120, 278);
+            this.txtName3.Location = new System.Drawing.Point(59, 264);
             this.txtName3.Name = "txtName3";
             this.txtName3.Size = new System.Drawing.Size(100, 20);
             this.txtName3.TabIndex = 10;
@@ -139,7 +142,7 @@ namespace Candyland_Final
             // lblName4
             // 
             this.lblName4.AutoSize = true;
-            this.lblName4.Location = new System.Drawing.Point(117, 310);
+            this.lblName4.Location = new System.Drawing.Point(56, 296);
             this.lblName4.Name = "lblName4";
             this.lblName4.Size = new System.Drawing.Size(72, 13);
             this.lblName4.TabIndex = 13;
@@ -149,17 +152,28 @@ namespace Candyland_Final
             // 
             // txtName4
             // 
-            this.txtName4.Location = new System.Drawing.Point(120, 326);
+            this.txtName4.Location = new System.Drawing.Point(59, 312);
             this.txtName4.Name = "txtName4";
             this.txtName4.Size = new System.Drawing.Size(100, 20);
             this.txtName4.TabIndex = 12;
             this.txtName4.Visible = false;
             // 
+            // pbMM
+            // 
+            this.pbMM.Image = ((System.Drawing.Image)(resources.GetObject("pbMM.Image")));
+            this.pbMM.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbMM.InitialImage")));
+            this.pbMM.Location = new System.Drawing.Point(221, 92);
+            this.pbMM.Name = "pbMM";
+            this.pbMM.Size = new System.Drawing.Size(215, 221);
+            this.pbMM.TabIndex = 14;
+            this.pbMM.TabStop = false;
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(504, 412);
+            this.Controls.Add(this.pbMM);
             this.Controls.Add(this.lblName4);
             this.Controls.Add(this.txtName4);
             this.Controls.Add(this.lblName3);
@@ -174,6 +188,7 @@ namespace Candyland_Final
             this.Controls.Add(this.label1);
             this.Name = "frmMenu";
             this.Text = "Candyland Menu";
+            ((System.ComponentModel.ISupportInitialize)(this.pbMM)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,5 +208,6 @@ namespace Candyland_Final
         private System.Windows.Forms.TextBox txtName3;
         private System.Windows.Forms.Label lblName4;
         private System.Windows.Forms.TextBox txtName4;
+        private System.Windows.Forms.PictureBox pbMM;
     }
 }

@@ -33,7 +33,10 @@ namespace Candyland_Final
             Card card = new Card();
             card.CardType = card.PickCard();
 
-            label1.Text = card.CardType;
+            // Assets folder inside bin/Debug, throws exception otherwise
+            string cardFilePath = $@"Assets\{card.CardType}.png";
+            pbCurrentCard.Load(cardFilePath);
+            pbCurrentCard.SizeMode = PictureBoxSizeMode.StretchImage;
 
             // account for each turn
             if(this.gameState.CurrentTurn == 1)
@@ -73,6 +76,8 @@ namespace Candyland_Final
 
         private void btnEndTurn_Click(object sender, EventArgs e)
         {
+            this.pbCurrentCard.Image = null;
+
             // toggle buttons so nobody can spam click and win
             this.btnEndTurn.Visible = false;
             this.btnDraw.Visible = true;

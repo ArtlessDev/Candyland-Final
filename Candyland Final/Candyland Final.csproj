@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -114,6 +116,7 @@
     <Content Include="Assets\doubleRed.png" />
     <Content Include="Assets\doubleYellow.png" />
     <Content Include="Assets\importantCoords.txt" />
+    <Content Include="Assets\MM.png" />
     <Content Include="Assets\singleBlue.png" />
     <Content Include="Assets\singleGreen.png" />
     <Content Include="Assets\singleOrange.png" />
@@ -125,6 +128,26 @@
     <Content Include="Assets\specialGeneric.png" />
     <Content Include="Assets\specialIcecream.png" />
     <Content Include="Assets\specialLollipop.png" />
+    <Content Include="bin\Debug\Assets\candylandBoard.png" />
+    <Content Include="bin\Debug\Assets\doubleBlue.png" />
+    <Content Include="bin\Debug\Assets\doubleGreen.png" />
+    <Content Include="bin\Debug\Assets\doubleOrange.png" />
+    <Content Include="bin\Debug\Assets\doublePurple.png" />
+    <Content Include="bin\Debug\Assets\doubleRed.png" />
+    <Content Include="bin\Debug\Assets\doubleYellow.png" />
+    <Content Include="bin\Debug\Assets\importantCoords.txt" />
+    <Content Include="bin\Debug\Assets\MM.png" />
+    <Content Include="bin\Debug\Assets\singleBlue.png" />
+    <Content Include="bin\Debug\Assets\singleGreen.png" />
+    <Content Include="bin\Debug\Assets\singleOrange.png" />
+    <Content Include="bin\Debug\Assets\singlePurple.png" />
+    <Content Include="bin\Debug\Assets\singleRed.png" />
+    <Content Include="bin\Debug\Assets\singleYellow.png" />
+    <Content Include="bin\Debug\Assets\specialCandycane.png" />
+    <Content Include="bin\Debug\Assets\specialDonut.png" />
+    <Content Include="bin\Debug\Assets\specialGeneric.png" />
+    <Content Include="bin\Debug\Assets\specialIcecream.png" />
+    <Content Include="bin\Debug\Assets\specialLollipop.png" />
     <Content Include="CandyLandStats.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

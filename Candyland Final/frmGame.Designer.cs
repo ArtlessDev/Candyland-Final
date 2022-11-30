@@ -30,7 +30,6 @@ namespace Candyland_Final
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGame));
-            this.label1 = new System.Windows.Forms.Label();
             this.btnDraw = new System.Windows.Forms.Button();
             this.pbPlayer1 = new System.Windows.Forms.PictureBox();
             this.boardImage = new System.Windows.Forms.PictureBox();
@@ -39,26 +38,18 @@ namespace Candyland_Final
             this.lblCurrentTurn = new System.Windows.Forms.Label();
             this.pbPlayer3 = new System.Windows.Forms.PictureBox();
             this.pbPlayer4 = new System.Windows.Forms.PictureBox();
+            this.pbCurrentCard = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.boardImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCurrentCard)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 563);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
             // 
             // btnDraw
             // 
-            this.btnDraw.Location = new System.Drawing.Point(328, 561);
+            this.btnDraw.Location = new System.Drawing.Point(315, 537);
             this.btnDraw.Margin = new System.Windows.Forms.Padding(2);
             this.btnDraw.Name = "btnDraw";
             this.btnDraw.Size = new System.Drawing.Size(74, 19);
@@ -83,7 +74,7 @@ namespace Candyland_Final
             this.boardImage.Location = new System.Drawing.Point(0, 0);
             this.boardImage.Margin = new System.Windows.Forms.Padding(2);
             this.boardImage.Name = "boardImage";
-            this.boardImage.Size = new System.Drawing.Size(504, 488);
+            this.boardImage.Size = new System.Drawing.Size(504, 420);
             this.boardImage.TabIndex = 3;
             this.boardImage.TabStop = false;
             // 
@@ -98,7 +89,7 @@ namespace Candyland_Final
             // 
             // btnEndTurn
             // 
-            this.btnEndTurn.Location = new System.Drawing.Point(410, 561);
+            this.btnEndTurn.Location = new System.Drawing.Point(397, 537);
             this.btnEndTurn.Margin = new System.Windows.Forms.Padding(2);
             this.btnEndTurn.Name = "btnEndTurn";
             this.btnEndTurn.Size = new System.Drawing.Size(74, 19);
@@ -111,9 +102,10 @@ namespace Candyland_Final
             // lblCurrentTurn
             // 
             this.lblCurrentTurn.AutoSize = true;
-            this.lblCurrentTurn.Location = new System.Drawing.Point(9, 537);
+            this.lblCurrentTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentTurn.Location = new System.Drawing.Point(24, 422);
             this.lblCurrentTurn.Name = "lblCurrentTurn";
-            this.lblCurrentTurn.Size = new System.Drawing.Size(61, 13);
+            this.lblCurrentTurn.Size = new System.Drawing.Size(134, 25);
             this.lblCurrentTurn.TabIndex = 6;
             this.lblCurrentTurn.Text = "current turn";
             // 
@@ -137,11 +129,20 @@ namespace Candyland_Final
             this.pbPlayer4.TabStop = false;
             this.pbPlayer4.Visible = false;
             // 
+            // pbCurrentCard
+            // 
+            this.pbCurrentCard.Location = new System.Drawing.Point(29, 459);
+            this.pbCurrentCard.Name = "pbCurrentCard";
+            this.pbCurrentCard.Size = new System.Drawing.Size(67, 97);
+            this.pbCurrentCard.TabIndex = 10;
+            this.pbCurrentCard.TabStop = false;
+            // 
             // frmGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 594);
+            this.ClientSize = new System.Drawing.Size(501, 587);
+            this.Controls.Add(this.pbCurrentCard);
             this.Controls.Add(this.pbPlayer4);
             this.Controls.Add(this.pbPlayer3);
             this.Controls.Add(this.lblCurrentTurn);
@@ -149,7 +150,6 @@ namespace Candyland_Final
             this.Controls.Add(this.pbPlayer2);
             this.Controls.Add(this.pbPlayer1);
             this.Controls.Add(this.btnDraw);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.boardImage);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGame";
@@ -159,14 +159,13 @@ namespace Candyland_Final
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCurrentCard)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDraw;
         private System.Windows.Forms.PictureBox pbPlayer1;
         private System.Windows.Forms.PictureBox boardImage;
@@ -175,6 +174,7 @@ namespace Candyland_Final
         private System.Windows.Forms.Label lblCurrentTurn;
         private System.Windows.Forms.PictureBox pbPlayer3;
         private System.Windows.Forms.PictureBox pbPlayer4;
+        private System.Windows.Forms.PictureBox pbCurrentCard;
     }
 }
 

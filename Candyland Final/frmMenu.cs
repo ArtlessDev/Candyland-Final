@@ -17,6 +17,7 @@ namespace Candyland_Final
         public frmMenu()
         {
             InitializeComponent();
+            this.pbMM.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         private void btnPlay_Click(object sender, EventArgs e)

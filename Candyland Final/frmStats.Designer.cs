@@ -38,23 +38,26 @@ namespace Candyland_Final
             // lblWinner
             // 
             this.lblWinner.AutoSize = true;
-            this.lblWinner.Location = new System.Drawing.Point(27, 24);
+            this.lblWinner.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWinner.Location = new System.Drawing.Point(24, 26);
             this.lblWinner.Name = "lblWinner";
-            this.lblWinner.Size = new System.Drawing.Size(38, 13);
+            this.lblWinner.Size = new System.Drawing.Size(100, 31);
             this.lblWinner.TabIndex = 0;
             this.lblWinner.Text = "winner";
             // 
             // dgvStats
             // 
+            this.dgvStats.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvStats.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStats.Location = new System.Drawing.Point(30, 60);
+            this.dgvStats.Location = new System.Drawing.Point(30, 81);
             this.dgvStats.Name = "dgvStats";
-            this.dgvStats.Size = new System.Drawing.Size(240, 150);
+            this.dgvStats.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvStats.Size = new System.Drawing.Size(422, 304);
             this.dgvStats.TabIndex = 1;
             // 
             // btnMenu
             // 
-            this.btnMenu.Location = new System.Drawing.Point(195, 397);
+            this.btnMenu.Location = new System.Drawing.Point(377, 414);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(75, 23);
             this.btnMenu.TabIndex = 2;
@@ -66,7 +69,7 @@ namespace Candyland_Final
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.dgvStats);
             this.Controls.Add(this.lblWinner);
