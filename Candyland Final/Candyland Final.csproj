@@ -115,6 +115,9 @@
     <Content Include="Assets\specialGeneric.png" />
     <Content Include="Assets\specialIcecream.png" />
     <Content Include="Assets\specialLollipop.png" />
+    <Content Include="CandyLandStats.accdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
