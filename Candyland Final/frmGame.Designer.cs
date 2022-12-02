@@ -29,10 +29,9 @@ namespace Candyland_Final
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGame));
             this.btnDraw = new System.Windows.Forms.Button();
             this.pbPlayer1 = new System.Windows.Forms.PictureBox();
-            this.boardImage = new System.Windows.Forms.PictureBox();
+            this.pbBoardImage = new System.Windows.Forms.PictureBox();
             this.pbPlayer2 = new System.Windows.Forms.PictureBox();
             this.btnEndTurn = new System.Windows.Forms.Button();
             this.lblCurrentTurn = new System.Windows.Forms.Label();
@@ -40,7 +39,7 @@ namespace Candyland_Final
             this.pbPlayer4 = new System.Windows.Forms.PictureBox();
             this.pbCurrentCard = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boardImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBoardImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer4)).BeginInit();
@@ -67,16 +66,16 @@ namespace Candyland_Final
             this.pbPlayer1.TabIndex = 2;
             this.pbPlayer1.TabStop = false;
             // 
-            // boardImage
+            // pbBoardImage
             // 
-            this.boardImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.boardImage.Image = ((System.Drawing.Image)(resources.GetObject("boardImage.Image")));
-            this.boardImage.Location = new System.Drawing.Point(0, 0);
-            this.boardImage.Margin = new System.Windows.Forms.Padding(2);
-            this.boardImage.Name = "boardImage";
-            this.boardImage.Size = new System.Drawing.Size(504, 420);
-            this.boardImage.TabIndex = 3;
-            this.boardImage.TabStop = false;
+            this.pbBoardImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbBoardImage.InitialImage = null;
+            this.pbBoardImage.Location = new System.Drawing.Point(0, 0);
+            this.pbBoardImage.Margin = new System.Windows.Forms.Padding(2);
+            this.pbBoardImage.Name = "pbBoardImage";
+            this.pbBoardImage.Size = new System.Drawing.Size(504, 420);
+            this.pbBoardImage.TabIndex = 3;
+            this.pbBoardImage.TabStop = false;
             // 
             // pbPlayer2
             // 
@@ -150,12 +149,12 @@ namespace Candyland_Final
             this.Controls.Add(this.pbPlayer2);
             this.Controls.Add(this.pbPlayer1);
             this.Controls.Add(this.btnDraw);
-            this.Controls.Add(this.boardImage);
+            this.Controls.Add(this.pbBoardImage);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGame";
             this.Text = "Candyland";
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.boardImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBoardImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayer4)).EndInit();
@@ -168,7 +167,7 @@ namespace Candyland_Final
         #endregion
         private System.Windows.Forms.Button btnDraw;
         private System.Windows.Forms.PictureBox pbPlayer1;
-        private System.Windows.Forms.PictureBox boardImage;
+        private System.Windows.Forms.PictureBox pbBoardImage;
         private System.Windows.Forms.PictureBox pbPlayer2;
         private System.Windows.Forms.Button btnEndTurn;
         private System.Windows.Forms.Label lblCurrentTurn;

@@ -17,6 +17,7 @@ namespace Candyland_Final
         public frmMenu()
         {
             InitializeComponent();
+            this.pbMM.Load(@"../../Assets/MM.png");
             this.pbMM.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 

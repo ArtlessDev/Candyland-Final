@@ -17,6 +17,8 @@ namespace Candyland_Final
         public frmGame(GameState gs)
         {
             InitializeComponent();
+            this.pbBoardImage.Load(@"../../Assets/candylandBoard.png");
+
             this.gameState = gs;
 
             addPlayersToUI();

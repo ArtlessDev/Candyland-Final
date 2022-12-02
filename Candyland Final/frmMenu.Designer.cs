@@ -29,7 +29,6 @@ namespace Candyland_Final
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.label1 = new System.Windows.Forms.Label();
             this.ddlPlayerCount = new System.Windows.Forms.ComboBox();
             this.lblPlayerCount = new System.Windows.Forms.Label();
@@ -160,8 +159,7 @@ namespace Candyland_Final
             // 
             // pbMM
             // 
-            this.pbMM.Image = ((System.Drawing.Image)(resources.GetObject("pbMM.Image")));
-            this.pbMM.InitialImage = ((System.Drawing.Image)(resources.GetObject("pbMM.InitialImage")));
+            this.pbMM.InitialImage = null;
             this.pbMM.Location = new System.Drawing.Point(221, 92);
             this.pbMM.Name = "pbMM";
             this.pbMM.Size = new System.Drawing.Size(215, 221);
