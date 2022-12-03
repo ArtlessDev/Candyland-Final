@@ -8,7 +8,6 @@ namespace Candyland_Final
 {
     class Card
     {
-        private string cardType;
         public string CardImg
         {
             get; set;
