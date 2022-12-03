@@ -16,5 +16,20 @@ namespace Candyland_Final.Tests
         {
             Assert.Fail();
         }
+        [TestMethod()]
+        public void SquareTest()
+        {
+            Assert.Fail();
+        }
+        [TestMethod()]
+        public void XValueTest()
+        {
+            Assert.Fail();
+        }
+        [TestMethod()]
+        public void YValueTest()
+        {
+            Assert.Fail();
+        }
     }
 }

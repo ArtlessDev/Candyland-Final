@@ -22,5 +22,25 @@ namespace Candyland_Final.Tests
         {
             Assert.Fail();
         }
+        [TestMethod()]
+        public void IdTest()
+        {
+            Assert.Fail();
+        }
+        [TestMethod()]
+        public void NameTest()
+        {
+            Assert.Fail();
+        }
+        [TestMethod()]
+        public void PositionTest()
+        {
+            Assert.Fail();
+        }
+        [TestMethod()]
+        public void ScoreTest()
+        {
+            Assert.Fail();
+        }
     }
 }

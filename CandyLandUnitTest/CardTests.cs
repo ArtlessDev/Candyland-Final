@@ -16,5 +16,15 @@ namespace Candyland_Final.Tests
         {
             Assert.Fail();
         }
+        [TestMethod()]
+        public void CardImgTest()
+        {
+            Assert.Fail();
+        }
+        [TestMethod()]
+        public void CardTypeTest()
+        {
+            Assert.Fail();
+        }
     }
 }

@@ -22,5 +22,14 @@ namespace Candyland_Final.Tests
         {
             Assert.Fail();
         }
+        [TestMethod()]
+        public void PlayersTest()
+        {
+            Assert.Fail();
+        }
+        public void CurrentTurnTest()
+        {
+            Assert.Fail();
+        }
     }
 }
