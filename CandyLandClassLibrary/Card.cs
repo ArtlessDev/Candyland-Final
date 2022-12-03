@@ -8,14 +8,35 @@ namespace Candyland_Final
 {
     public class Card
     {
-        private string cardType;
+        string cardImg, cardType;
+
+        public Card()
+        {
+            cardImg = "picture not set";
+            cardType = "type not set";
+        }
+
         public string CardImg
         {
-            get; set;
+            get
+            {
+                return cardImg;
+            }
+            set
+            {
+                this.cardImg = value;
+            }
         }
         public string CardType
         {
-            get; set;
+            get
+            {
+                return cardType;
+            }
+            set
+            {
+                this.cardType = value;
+            }
         }
 
         public string PickCard()

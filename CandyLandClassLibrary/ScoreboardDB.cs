@@ -68,7 +68,7 @@ namespace Candyland_Final
             }
             catch (SystemException ex)
             {
-                Console.WriteLine("system error");
+                Console.WriteLine("system error" + ex);
             }
             finally
             {
@@ -97,7 +97,7 @@ namespace Candyland_Final
             }
             catch (SystemException ex)
             {
-                Console.WriteLine("system error");
+                Console.WriteLine("system error" + ex);
             }
             finally
             {
